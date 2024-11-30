@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Rol</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="imagenes/logo.jpeg" alt="Logo Residencial" class="logo">
+      <h1>Plataforma de Gestión Residencial</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="role-selection">
+      <h2>Selecciona tu Rol</h2>
+      <p>Bienvenido, <strong><!-- Aquí puedes insertar el nombre del usuario desde backend --></strong>.</p>
+      <form action="procesar_rol.php" method="POST">
+        <input type="hidden" name="nombre" value="<!-- Aquí va el nombre del usuario -->">
+        <input type="hidden" name="cedula" value="<!-- Aquí va la cédula del usuario -->">
+
+        <label for="rol">Elija su rol:</label>
+        <select id="rol" name="rol" required>
+          <option value="" disabled selected>Seleccione...</option>
+          <option value="administrador">Administrador</option>
+          <option value="residente">Residente</option>
+        </select>
+
+        <button type="submit">Continuar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gestión Residencial. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

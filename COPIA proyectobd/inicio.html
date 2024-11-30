@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="imagenes/logo.jpeg" alt="Logo Residencial" class="logo">
+      <h1>Plataforma de Gestión Residencial</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <h2>Inicio de Sesión</h2>
+      <form action="procesar_login.php" method="POST">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cédula" required>
+
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gestión Residencial. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
