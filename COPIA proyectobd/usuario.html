@@ -31,6 +31,29 @@
 
   <main>
 
+     <!-- Sección para editar usuarios -->
+    <section id="form-editar-usuario" class="form-section">
+        <h2>Editar Usuario</h2>
+        <form action="editar_usuario.php" method="POST">
+          <label for="codigoUsuarioEditar">Código Usuario:</label>
+          <input type="number" id="codigoUsuarioEditar" name="codigoUsuarioEditar" required />
+      
+          <label for="nombreUsuarioEditar">Nombre del Usuario:</label>
+          <input type="text" id="nombreUsuarioEditar" name="nombreUsuarioEditar" required />
+      
+          <label for="emailUsuarioEditar">Email:</label>
+          <input type="email" id="emailUsuarioEditar" name="emailUsuarioEditar" required />
+      
+          <label for="rolUsuarioEditar">Rol:</label>
+          <select id="rolUsuarioEditar" name="rolUsuarioEditar" required>
+            <option value="administrador">Administrador</option>
+            <option value="residente">Residente</option>
+          </select>
+      
+          <button type="submit">Actualizar Usuario</button>
+        </form>
+      </section>
+
     <!-- Sección para administración de pagos -->
     <section id="form-pago" class="form-section">
       <h2>Administración de Pagos</h2>

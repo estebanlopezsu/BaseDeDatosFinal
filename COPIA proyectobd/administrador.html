@@ -31,6 +31,92 @@
 
   <main>
 
+     <!-- Sección para registrar Usuario-->
+    <section id="form-registro-usuario" class="form-section">
+        <h2>Registro de Usuario</h2>
+        <form action="registro_usuario.php" method="POST">
+          <label for="codigoUsuario">Código Usuario:</label>
+          <input type="number" id="codigoUsuario" name="codigoUsuario" required />
+      
+          <label for="nombreUsuario">Nombre del Usuario:</label>
+          <input type="text" id="nombreUsuario" name="nombreUsuario" required />
+      
+          <label for="emailUsuario">Email:</label>
+          <input type="email" id="emailUsuario" name="emailUsuario" required />
+      
+          <label for="rolUsuario">Rol:</label>
+          <select id="rolUsuario" name="rolUsuario" required>
+            <option value="administrador">Administrador</option>
+            <option value="residente">Residente</option>
+          </select>
+      
+          <button type="submit">Registrar Usuario</button>
+        </form>
+      </section>
+
+ <!-- Sección para Editar Usuario-->
+    <section id="form-editar-usuario" class="form-section">
+        <h2>Editar Usuario</h2>
+        <form action="editar_usuario.php" method="POST">
+          <label for="codigoUsuarioEditar">Código Usuario:</label>
+          <input type="number" id="codigoUsuarioEditar" name="codigoUsuarioEditar" required />
+      
+          <label for="nombreUsuarioEditar">Nombre del Usuario:</label>
+          <input type="text" id="nombreUsuarioEditar" name="nombreUsuarioEditar" required />
+      
+          <label for="emailUsuarioEditar">Email:</label>
+          <input type="email" id="emailUsuarioEditar" name="emailUsuarioEditar" required />
+      
+          <label for="rolUsuarioEditar">Rol:</label>
+          <select id="rolUsuarioEditar" name="rolUsuarioEditar" required>
+            <option value="administrador">Administrador</option>
+            <option value="residente">Residente</option>
+          </select>
+      
+          <button type="submit">Actualizar Usuario</button>
+        </form>
+      </section>
+
+       <!-- Sección para Borrar Usuario-->
+      <section id="form-eliminar-usuario" class="form-section">
+        <h2>Eliminar Usuario</h2>
+        <form action="eliminar_usuario.php" method="POST">
+          <label for="codigoUsuarioEliminar">Código Usuario:</label>
+          <input type="number" id="codigoUsuarioEliminar" name="codigoUsuarioEliminar" required />
+      
+          <button type="submit">Eliminar Usuario</button>
+        </form>
+      </section>
+
+      <section id="form-ver-usuarios" class="form-section">
+        <h2>Usuarios Registrados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se insertarán las filas con los usuarios -->
+            <!-- Ejemplo de una fila -->
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <a href="editar_usuario.php?id=1">Editar</a> | 
+                <a href="eliminar_usuario.php?id=1">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
     <!-- Sección para gestión de inmuebles -->
     <section id="form-registro-inmueble" class="form-section">
       <h2>Gestión de Inmuebles</h2>
@@ -241,7 +327,7 @@
     <label for="codigo_mantenimiento">Código de Mantenimiento:</label>
     <input type="number" id="codigo_mantenimiento" name="codigo_mantenimiento" required />
 
-    <button type="submit">Generar Reporte</button>
+    <button type="submit">Generar Reporte</button>f
   </form>
 </section>
 
@@ -249,7 +335,7 @@
 
   </main>
 
-  <footer>
+  <footer>ddc
     <p>&copy; 2024 Gestión Residencial. Todos los derechos reservados.</p>
   </footer>
 
@@ -264,3 +350,4 @@
   </script>
 </body>
 </html>
+d
