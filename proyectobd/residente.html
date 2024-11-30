@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma de Gestión Residencial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="imagenes/logo.jpeg" alt="Logo Residencial" class="logo" />
+      <h1>Plataforma de Gestión Residencial</h1>
+    </div>
+    <nav>
+      <a href="#form-registro-usuario">Usuarios</a>
+      <a href="#form-registro-inmueble">Inmuebles</a>
+      <a href="#form-pago">Pagos</a>
+      <a href="#form-reserva">Reservas</a>
+      <a href="#form-mensaje">Chat</a>
+      <a href="#form-evento">Eventos</a>
+      <a href="#form-documento">Documentos</a>
+      <a href="#form-mantenimiento">Mantenimiento</a>
+      <a href="#form-permiso">Permisos</a>
+      <a href="#form-reporte">Reportes</a>
+      <a href="#form-rol">Roles</a>
+      <a href="#form-visita">Visitas</a>
+
+    </nav>
+  </header>
+
+  <main>
+
+     <!-- Sección para editar usuarios -->
+    <section id="form-editar-usuario" class="form-section">
+        <h2>Editar Usuario</h2>
+        <form action="editar_usuario.php" method="POST">
+          <label for="codigoUsuarioEditar">Código Usuario:</label>
+          <input type="number" id="codigoUsuarioEditar" name="codigoUsuarioEditar" required />
+      
+          <label for="nombreUsuarioEditar">Nombre del Usuario:</label>
+          <input type="text" id="nombreUsuarioEditar" name="nombreUsuarioEditar" required />
+      
+          <label for="emailUsuarioEditar">Email:</label>
+          <input type="email" id="emailUsuarioEditar" name="emailUsuarioEditar" required />
+      
+          <label for="rolUsuarioEditar">Rol:</label>
+          <select id="rolUsuarioEditar" name="rolUsuarioEditar" required>
+            <option value="administrador">Administrador</option>
+            <option value="residente">Residente</option>
+          </select>
+      
+          <button type="submit">Actualizar Usuario</button>
+        </form>
+      </section>
+
+    <!-- Sección para administración de pagos -->
+    <section id="form-pago" class="form-section">
+      <h2>Administración de Pagos</h2>
+      <form action="realizar_pago.php" method="POST">
+
+        <label for="codigoUsuarioPago">Código Usuario:</label>
+        <input type="number" id="codigoUsuarioPago" name="codigoUsuarioPago" required />
+
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" name="monto" placeholder="Ej. 100000" required />
+
+        <label for="fecha">Fecha de Pago:</label>
+        <input type="date" id="fecha" name="fecha" required />
+
+        <label for="estadoPago">Estado del Pago:</label>
+        <select id="estadoPago" name="estadoPago" required>
+          <option value="mora">Mora</option>
+          <option value="pagoDisponible">Pago Disponible</option>
+          <option value="pagoNoDisponible">Pago No Disponible</option>
+        </select>
+
+        <button type="submit">Realizar Pago</button>
+      </form>
+    </section>
+
+    <!-- Formulario para reservas -->
+    <section id="form-reserva" class="form-section">
+      <h2>Reservas de Espacios Comunes</h2>
+      <form action="reserva.php" method="POST">
+
+        <label for="codigoReserva">Código Reserva:</label>
+        <input type="number" id="codigoReserva" name="codigoReserva" required />  
+
+        <label for="fecha_reserva">Fecha de Reserva:</label>
+        <input type="date" id="fecha_reserva" name="fecha_reserva" required />
+        
+        <label for="disponibleReserva">Disponibilidad del Espacio:</label>
+        <select id="disponibleReserva" name="disponibleReserva" required>
+          <option value="disponible">Disponible</option>
+          <option value="ocupado">Ocupado</option>
+        </select>
+
+        <label for="codigoUsuarioReserva">Código Usuario:</label>
+        <input type="number" id="codigoUsuarioReserva" name="codigoUsuarioReserva" required />
+
+        <button type="submit">Reservar</button>
+      </form>
+    </section>
+
+
+<!-- Sección para mensajes internos -->
+<section id="form-mensaje" class="form-section">
+  <h2>Mensajes Internos</h2>
+  <form action="enviar_mensaje.php" method="POST">
+    <label for="codigoMensaje">codigo mensaje:</label>
+    <input type="number" id="codigoMensaje" name="codigoMensaje" required />   
+
+    <label for="asunto_mensaje">Asunto:</label>
+    <textarea id="asunto_mensaje" name="asunto_mensaje" rows="3" placeholder="Escribe el asunto del mensaje..." required></textarea>
+
+    <label for="fecha_mensaje">Fecha:</label>
+    <input type="date" id="fecha_mensaje" name="fecha_mensaje" required />
+
+    <label for="destinatario_mensaje">Destinatario:</label>
+    <input type="text" id="destinatario_mensaje" name="destinatario_mensaje" placeholder="Ej. destinatario@correo.com" required />
+
+    <label for="remitente_mensaje">Remitente:</label>
+    <input type="text" id="remitente_mensaje" name="remitente_mensaje" placeholder="Ej. remitente@correo.com" required />
+
+    <label for="id_usuario">ID de Usuario:</label>
+    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario remitente" required />
+
+    <label for="codigo_reserva">Código de Reserva:</label>
+    <input type="number" id="codigo_reserva" name="codigo_reserva" placeholder="Si aplica, ingrese el código de reserva" />
+
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+</section>
+
+
+
+
+<!-- Sección para gestión de permisos -->
+<section id="form-permiso" class="form-section">
+  <h2>Gestión de Permisos</h2>
+  <form action="registro_permiso.php" method="POST">
+
+    <label for="codigo_permiso">Codigo permiso:</label>
+    <input type="number" id="codigo_Mantenimiento" name="codigo_Mantenimiento" required />   
+
+    <label for="descripcion_permiso">Descripción del Permiso:</label>
+    <input type="text" id="descripcion_permiso" name="descripcion_permiso" placeholder="Ej. Acceso a área común" required />
+
+    <button type="submit">Registrar Permiso</button>
+  </form>
+</section>
+
+
+
+<!-- Sección para gestión de visitas -->
+<section id="form-visita" class="form-section">
+  <h2>Registro de Visitas</h2>
+  <form action="registro_visita.php" method="POST">
+
+    <label for="codigo_visita">Codigo visitante:</label>
+    <input type="number" id="codigo_visita" name="codigo_visita" required />   
+
+    <label for="nombre_visita">Nombre del Visitante:</label>
+    <input type="text" id="nombre_visita" name="nombre_visita" placeholder="Nombre del visitante" required />
+
+    <label for="fecha_visita">Fecha de Visita:</label>
+    <input type="date" id="fecha_visita" name="fecha_visita" required />
+
+    <label for="motivo_visita">Motivo de la Visita:</label>
+    <textarea id="motivo_visita" name="motivo_visita" placeholder="Ej. Reunión, Mantenimiento, etc." required></textarea>
+
+    <label for="codigo_reporte">Asociar a un Reporte (opcional):</label>
+    <input type="number" id="codigo_reporte" name="codigo_reporte" placeholder="ID del Reporte" />
+
+    <label for="codigo_evento">Asociar a un Evento (opcional):</label>
+    <input type="number" id="codigo_evento" name="codigo_evento" placeholder="ID del Evento" />
+
+    <label for="codigo_reserva">Asociar a una Reserva (opcional):</label>
+    <input type="number" id="codigo_reserva" name="codigo_reserva" placeholder="ID de la Reserva" />
+
+    <label for="codigo_inmueble">Asociar a un Inmueble (opcional):</label>
+    <input type="number" id="codigo_inmueble" name="codigo_inmueble" placeholder="ID del Inmueble" />
+
+    <button type="submit">Registrar Visita</button>
+  </form>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Gestión Residencial. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function enviarMensaje() {
+      const mensaje = document.getElementById('mensaje').value;
+      if (mensaje.trim() !== '') {
+        document.getElementById('mensajes').innerHTML += `<p><strong>Yo:</strong> ${mensaje}</p>`;
+        document.getElementById('mensaje').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
