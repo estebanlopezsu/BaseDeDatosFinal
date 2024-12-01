@@ -31,77 +31,78 @@
 
   <main>
 
-     <!-- Sección para editar usuarios -->
-    <section id="form-editar-usuario" class="form-section">
-        <h2>Editar Usuario</h2>
-        <form action="editar_usuario.php" method="POST">
-          <label for="codigoUsuarioEditar">Código Usuario:</label>
-          <input type="number" id="codigoUsuarioEditar" name="codigoUsuarioEditar" required />
+    <!-- Sección para editar residentes -->
+    <section id="form-editar-residente" class="form-section">
+      <h2>Editar Residente</h2>
+      <form action="editar_residente.php" method="POST">
+          <label for="codigoResidenteEditar">Código Residente:</label>
+          <input type="number" id="codigoResidenteEditar" name="codigoResidenteEditar" required />
       
-          <label for="nombreUsuarioEditar">Nombre del Usuario:</label>
-          <input type="text" id="nombreUsuarioEditar" name="nombreUsuarioEditar" required />
+          <label for="nombreResidenteEditar">Nombre del Residente:</label>
+          <input type="text" id="nombreResidenteEditar" name="nombreResidenteEditar" required />
       
-          <label for="emailUsuarioEditar">Email:</label>
-          <input type="email" id="emailUsuarioEditar" name="emailUsuarioEditar" required />
+          <label for="emailResidenteEditar">Email:</label>
+          <input type="email" id="emailResidenteEditar" name="emailResidenteEditar" required />
       
-          <label for="rolUsuarioEditar">Rol:</label>
-          <select id="rolUsuarioEditar" name="rolUsuarioEditar" required>
-            <option value="administrador">Administrador</option>
-            <option value="residente">Residente</option>
+          <label for="rolResidenteEditar">Rol:</label>
+          <select id="rolResidenteEditar" name="rolResidenteEditar" required>
+              <option value="administrador">Administrador</option>
+              <option value="residente">Residente</option>
           </select>
       
-          <button type="submit">Actualizar Usuario</button>
-        </form>
-      </section>
-
-    <!-- Sección para administración de pagos -->
-    <section id="form-pago" class="form-section">
-      <h2>Administración de Pagos</h2>
-      <form action="realizar_pago.php" method="POST">
-
-        <label for="codigoUsuarioPago">Código Usuario:</label>
-        <input type="number" id="codigoUsuarioPago" name="codigoUsuarioPago" required />
-
-        <label for="monto">Monto:</label>
-        <input type="number" id="monto" name="monto" placeholder="Ej. 100000" required />
-
-        <label for="fecha">Fecha de Pago:</label>
-        <input type="date" id="fecha" name="fecha" required />
-
-        <label for="estadoPago">Estado del Pago:</label>
-        <select id="estadoPago" name="estadoPago" required>
-          <option value="mora">Mora</option>
-          <option value="pagoDisponible">Pago Disponible</option>
-          <option value="pagoNoDisponible">Pago No Disponible</option>
-        </select>
-
-        <button type="submit">Realizar Pago</button>
+          <button type="submit">Actualizar Residente</button>
       </form>
     </section>
 
-    <!-- Formulario para reservas -->
-    <section id="form-reserva" class="form-section">
-      <h2>Reservas de Espacios Comunes</h2>
-      <form action="reserva.php" method="POST">
+<!-- Sección para administración de pagos -->
+<section id="form-pago" class="form-section">
+  <h2>Administración de Pagos</h2>
+  <form action="realizar_pago.php" method="POST">
 
-        <label for="codigoReserva">Código Reserva:</label>
-        <input type="number" id="codigoReserva" name="codigoReserva" required />  
+    <label for="codigoResidentePago">Código Residente:</label>
+    <input type="number" id="codigoResidentePago" name="codigoResidentePago" required />
 
-        <label for="fecha_reserva">Fecha de Reserva:</label>
-        <input type="date" id="fecha_reserva" name="fecha_reserva" required />
-        
-        <label for="disponibleReserva">Disponibilidad del Espacio:</label>
-        <select id="disponibleReserva" name="disponibleReserva" required>
-          <option value="disponible">Disponible</option>
-          <option value="ocupado">Ocupado</option>
-        </select>
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" name="monto" placeholder="Ej. 100000" required />
 
-        <label for="codigoUsuarioReserva">Código Usuario:</label>
-        <input type="number" id="codigoUsuarioReserva" name="codigoUsuarioReserva" required />
+    <label for="fecha">Fecha de Pago:</label>
+    <input type="date" id="fecha" name="fecha" required />
 
-        <button type="submit">Reservar</button>
-      </form>
-    </section>
+    <label for="estadoPago">Estado del Pago:</label>
+    <select id="estadoPago" name="estadoPago" required>
+      <option value="mora">Mora</option>
+      <option value="pagoDisponible">Pago Disponible</option>
+      <option value="pagoNoDisponible">Pago No Disponible</option>
+    </select>
+
+    <button type="submit">Realizar Pago</button>
+  </form>
+</section>
+
+
+<!-- Formulario para reservas -->
+<section id="form-reserva" class="form-section">
+  <h2>Reservas de Espacios Comunes</h2>
+  <form action="reserva.php" method="POST">
+
+    <label for="codigoReserva">Código Reserva:</label>
+    <input type="number" id="codigoReserva" name="codigoReserva" required />  
+
+    <label for="fecha_reserva">Fecha de Reserva:</label>
+    <input type="date" id="fecha_reserva" name="fecha_reserva" required />
+    
+    <label for="disponibleReserva">Disponibilidad del Espacio:</label>
+    <select id="disponibleReserva" name="disponibleReserva" required>
+      <option value="disponible">Disponible</option>
+      <option value="ocupado">Ocupado</option>
+    </select>
+
+    <label for="codigoResidenteReserva">Código Residente:</label>
+    <input type="number" id="codigoResidenteReserva" name="codigoResidenteReserva" required />
+
+    <button type="submit">Reservar</button>
+  </form>
+</section>
 
 
 <!-- Sección para mensajes internos -->
@@ -123,15 +124,14 @@
     <label for="remitente_mensaje">Remitente:</label>
     <input type="text" id="remitente_mensaje" name="remitente_mensaje" placeholder="Ej. remitente@correo.com" required />
 
-    <label for="id_usuario">ID de Usuario:</label>
-    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario remitente" required />
-
+    <label for="id_residente">ID de Residente:</label>
+    <input type="number" id="id_residente" name="id_residente" placeholder="ID del residente remitente" required />
+    
     <label for="codigo_reserva">Código de Reserva:</label>
     <input type="number" id="codigo_reserva" name="codigo_reserva" placeholder="Si aplica, ingrese el código de reserva" />
-
+    
     <button type="submit">Enviar Mensaje</button>
-  </form>
-</section>
+    
 
 
 
