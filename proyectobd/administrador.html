@@ -31,91 +31,91 @@
 
   <main>
 
-     <!-- Sección para registrar Usuario-->
-    <section id="form-registro-usuario" class="form-section">
+     <!-- Sección para registrar administrador-->
+    <section id="form-registro-administrador" class="form-section">
         <h2>Registro de Usuario</h2>
-        <form action="registro_usuario.php" method="POST">
-          <label for="codigoUsuario">Código Usuario:</label>
-          <input type="number" id="codigoUsuario" name="codigoUsuario" required />
+        <form action="registro_administrador.php" method="POST">
+          <label for="codigoAdministrador">Código Administrador:</label>
+          <input type="number" id="codigoAdministrador" name="codigoAdministrador" required />
       
-          <label for="nombreUsuario">Nombre del Usuario:</label>
-          <input type="text" id="nombreUsuario" name="nombreUsuario" required />
+          <label for="nombreAdministrador">Nombre del admiinistrador:</label>
+          <input type="text" id="nombreAdministrador" name="nombreAdministrador" required />
       
-          <label for="emailUsuario">Email:</label>
-          <input type="email" id="emailUsuario" name="emailUsuario" required />
+          <label for="emailAdministrador">Email:</label>
+          <input type="email" id="emailAdministrador" name="emailAdministrador" required />
       
-          <label for="rolUsuario">Rol:</label>
-          <select id="rolUsuario" name="rolUsuario" required>
+          <label for="rol">Rol:</label>
+          <select id="rolUsuario" name="rolAdministrador" required>
             <option value="administrador">Administrador</option>
             <option value="residente">Residente</option>
           </select>
       
-          <button type="submit">Registrar Usuario</button>
+          <button type="submit">Registrar Admisnitrador</button>
         </form>
       </section>
 
- <!-- Sección para Editar Usuario-->
-    <section id="form-editar-usuario" class="form-section">
-        <h2>Editar Usuario</h2>
-        <form action="editar_usuario.php" method="POST">
-          <label for="codigoUsuarioEditar">Código Usuario:</label>
-          <input type="number" id="codigoUsuarioEditar" name="codigoUsuarioEditar" required />
-      
-          <label for="nombreUsuarioEditar">Nombre del Usuario:</label>
-          <input type="text" id="nombreUsuarioEditar" name="nombreUsuarioEditar" required />
-      
-          <label for="emailUsuarioEditar">Email:</label>
-          <input type="email" id="emailUsuarioEditar" name="emailUsuarioEditar" required />
-      
-          <label for="rolUsuarioEditar">Rol:</label>
-          <select id="rolUsuarioEditar" name="rolUsuarioEditar" required>
-            <option value="administrador">Administrador</option>
-            <option value="residente">Residente</option>
-          </select>
-      
-          <button type="submit">Actualizar Usuario</button>
-        </form>
-      </section>
+<!-- Sección para Editar Administrador-->
+        <section id="form-editar-administrador" class="form-section">
+          <h2>Editar Administrador</h2>
+          <form action="http://localhost/PROYECTOBD/editar_administrador.php" method="POST">
+              <label for="codigoAdministradorEditar">Código Administrador:</label>
+              <input type="number" id="codigoAdministradorEditar" name="codigoAdministradorEditar" required />
+          
+              <label for="nombreAdministradorEditar">Nombre del Administrador:</label>
+              <input type="text" id="nombreAdministradorEditar" name="nombreAdministradorEditar" required />
+          
+              <label for="emailAdministradorEditar">Email:</label>
+              <input type="email" id="emailAdministradorEditar" name="emailAdministradorEditar" required />
+          
+              <label for="rolAdministradorEditar">Rol:</label>
+              <select id="rolAdministradorEditar" name="rolAdministradorEditar" required>
+                  <option value="administrador">Administrador</option>
+                  <option value="residente">Residente</option>
+              </select>
+          
+              <button type="submit">Actualizar Administrador</button>
+          </form>
+        </section>
 
-       <!-- Sección para Borrar Usuario-->
-      <section id="form-eliminar-usuario" class="form-section">
-        <h2>Eliminar Usuario</h2>
-        <form action="eliminar_usuario.php" method="POST">
-          <label for="codigoUsuarioEliminar">Código Usuario:</label>
-          <input type="number" id="codigoUsuarioEliminar" name="codigoUsuarioEliminar" required />
-      
-          <button type="submit">Eliminar Usuario</button>
-        </form>
-      </section>
 
-      <section id="form-ver-usuarios" class="form-section">
-        <h2>Usuarios Registrados</h2>
-        <table>
-          <thead>
-            <tr>
+<!-- Sección para Borrar Administrador-->
+<section id="form-eliminar-administrador" class="form-section">
+  <h2>Eliminar Administrador</h2>
+  <form action="eliminar_administrador.php" method="POST">
+      <label for="codigoAdministradorEliminar">Código Administrador:</label>
+      <input type="number" id="codigoAdministradorEliminar" name="codigoAdministradorEliminar" required />
+  
+      <button type="submit">Eliminar Administrador</button>
+  </form>
+</section>
+
+<section id="form-ver-administradores" class="form-section">
+  <h2>Administradores Registrados</h2>
+  <table>
+      <thead>
+          <tr>
               <th>Código</th>
               <th>Nombre</th>
               <th>Email</th>
               <th>Rol</th>
               <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Aquí se insertarán las filas con los usuarios -->
-            <!-- Ejemplo de una fila -->
-            <tr>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
               <td></td>
               <td></td>
               <td></td>
               <td></td>
               <td>
-                <a href="editar_usuario.php?id=1">Editar</a> | 
-                <a href="eliminar_usuario.php?id=1">Eliminar</a>
+                  <a href="editar_administrador.php?id=1">Editar</a> | 
+                  <a href="eliminar_administrador.php?id=1">Eliminar</a>
               </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+          </tr>
+      </tbody>
+  </table>
+</section>
+
 
     <!-- Sección para gestión de inmuebles -->
     <section id="form-registro-inmueble" class="form-section">
@@ -144,9 +144,9 @@
     <!-- Sección para administración de pagos -->
     <section id="form-pago" class="form-section">
       <h2>Administración de Pagos</h2>
-      <form action="realizar_pago.php" method="POST">
+      <form action="hhtp://localhost/PROYECTOBD/realizar_pago.php" method="POST">
 
-        <label for="codigoUsuarioPago">Código Usuario:</label>
+        <label for="codigoUsuarioPago">Código Administrador:</label>
         <input type="number" id="codigoUsuarioPago" name="codigoUsuarioPago" required />
 
         <label for="monto">Monto:</label>
@@ -171,7 +171,7 @@
 <!-- Sección para mensajes internos -->
 <section id="form-mensaje" class="form-section">
   <h2>Mensajes Internos</h2>
-  <form action="enviar_mensaje.php" method="POST">
+  <form action="hhtp://localhost/PROYECTOBD/enviar_mesanje.php" method="POST">
     <label for="codigoMensaje">codigo mensaje:</label>
     <input type="number" id="codigoMensaje" name="codigoMensaje" required />   
 
@@ -187,8 +187,8 @@
     <label for="remitente_mensaje">Remitente:</label>
     <input type="text" id="remitente_mensaje" name="remitente_mensaje" placeholder="Ej. remitente@correo.com" required />
 
-    <label for="id_usuario">ID de Usuario:</label>
-    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario remitente" required />
+    <label for="id_administrador">ID de Administrador:</label>
+    <input type="number" id="id_administrador" name="id_administrador" placeholder="ID del administrador remitente" required />
 
     <label for="codigo_reserva">Código de Reserva:</label>
     <input type="number" id="codigo_reserva" name="codigo_reserva" placeholder="Si aplica, ingrese el código de reserva" />
@@ -218,8 +218,8 @@
     <label for="recordatorio_evento">Recordatorio:</label>
     <input type="text" id="recordatorio_evento" name="recordatorio_evento" placeholder="Ej. Recordar 2 días antes" required />
 
-    <label for="id_usuario">ID de Usuario (Organizador):</label>
-    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario organizador" required />
+    <label for="id_administrador">ID de administrador (Organizador):</label>
+    <input type="number" id="id_administrador" name="id_administrador" placeholder="ID del administrador organizador" required />
 
     <button type="submit">Crear Evento</button>
   </form>
@@ -245,8 +245,8 @@
     <label for="fecha_documento">Fecha del Documento:</label>
     <input type="date" id="fecha_documento" name="fecha_documento" required />
 
-    <label for="id_usuario">ID de Usuario (Responsable):</label>
-    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario responsable" required />
+    <label for="id_administrador">ID de admiinistrador (Responsable):</label>
+    <input type="number" id="id_administrador" name="id_administrador" placeholder="ID del admiinistrador responsable" required />
 
     <button type="submit">Subir Documento</button>
   </form>
@@ -276,8 +276,8 @@
     <label for="responsable_mantenimiento">Responsable del Mantenimiento:</label>
     <input type="text" id="responsable_mantenimiento" name="responsable_mantenimiento" placeholder="Nombre del responsable" required />
 
-    <label for="id_usuario">ID del Usuario Responsable:</label>
-    <input type="number" id="id_usuario" name="id_usuario" placeholder="ID del usuario responsable" required />
+    <label for="id_administrador">ID del administrador Responsable:</label>
+    <input type="number" id="id_administrador" name="id_administrador" placeholder="ID del admiinistrador responsable" required />
 
     <label for="codigo_inmueble">Código de Inmueble:</label>
     <input type="number" id="codigo_inmueble" name="codigo_inmueble" placeholder="Código del inmueble que requiere mantenimiento" required />
